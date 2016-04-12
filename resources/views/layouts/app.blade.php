@@ -46,8 +46,20 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
+                    @if (Auth::guest())
+                        <li><a href="{{ url('/home') }}">Home</a></li>
+                    @else
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                CLIENTES<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ url('/agregar-cliente') }}">Agregar Cliente</a></li>
+                            </ul>
+                        </li>
+                    @endif
                 </ul>
+                
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
