@@ -27,8 +27,8 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function AgregarCliente()
+    public function clientes()
     {
-        return view('AgregarCliente');
+        return view('clientes');
     }
 }

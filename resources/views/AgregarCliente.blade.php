@@ -2,9 +2,9 @@
 
 @section('content')
     <div class="row">
-        <div class="col-lg-2">
+        <div class="col-lg-1">
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-10">
             
             <hr />
             <div class="panel panel-default">
@@ -13,10 +13,22 @@
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                         {!! csrf_field() !!}
 
-                        <div class="form-group{{ $errors->has('nombres') ? ' has-error' : '' }}">
-                            <label class="col-lg-4 control-label">Nombre (s)</label>
+                        <div class="form-group{{ $errors->has('razonSocial') ? ' has-error' : '' }}">
+                            <label class="col-lg-1 control-label">Razón Social:</label>
 
                             <div class="col-lg-6">
+                                <input type="text" class="form-control" name="razonSocial" value="{{ old('razonSocial') }}">
+
+                                @if ($errors->has('razonSocial'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('razonSocial') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+
+                            <label class="col-lg-1 control-label">R.F.C:</label>
+
+                            <div class="col-lg-3">
                                 <input type="text" class="form-control" name="nombres" value="{{ old('nombres') }}">
 
                                 @if ($errors->has('nombres'))
@@ -69,29 +81,29 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Password</label>
+                        <div class="form-group{{ $errors->has('contrasenia') ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">Contraseña</label>
 
                             <div class="col-md-6">
-                                <input type="password" class="form-control" name="password">
+                                <input type="password" class="form-control" name="contrasenia">
 
-                                @if ($errors->has('password'))
+                                @if ($errors->has('contrasenia'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
+                                        <strong>{{ $errors->first('contrasenia') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Confirm Password</label>
+                        <div class="form-group{{ $errors->has('confirmarContrasenia') ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">Confirmar Contraseña</label>
 
                             <div class="col-md-6">
-                                <input type="password" class="form-control" name="password_confirmation">
+                                <input type="password" class="form-control" name="confirmarContrasenia">
 
-                                @if ($errors->has('password_confirmation'))
+                                @if ($errors->has('confirmarContrasenia'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('password_confirmation') }}</strong>
+                                        <strong>{{ $errors->first('confirmarContrasenia') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -100,7 +112,7 @@
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-btn fa-user"></i>Register
+                                    <i class="fa fa-btn fa-user"></i>Registrar
                                 </button>
                             </div>
                         </div>
@@ -108,7 +120,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-1">
         </div>
     </div>
 @endsection
