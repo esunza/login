@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use Illuminate\Http\Request;
+use App\clientes;
+use Request;
 
 class HomeController extends Controller
 {
@@ -30,5 +31,17 @@ class HomeController extends Controller
     public function clientes()
     {
         return view('clientes');
+    }
+
+    public function create()
+    {
+        return view('agregarCliente');
+    }
+
+    public function store()
+    {
+        $input=Request::all();
+        Clientes::create($input);
+        return redirect('clientes');
     }
 }

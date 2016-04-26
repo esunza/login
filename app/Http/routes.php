@@ -18,3 +18,7 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 
 Route::get('/clientes', 'HomeController@clientes');
+
+Route::get('/agregar-cliente', 'HomeController@create');
+
+Route::post('/insertar-cliente', 'HomeController@store');
