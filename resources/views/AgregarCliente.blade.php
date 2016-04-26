@@ -13,20 +13,23 @@
                     <h3>Datos de la empresa:</h3>
                     <hr />
                     <div class="form-group">
+                    {!!Form::open(['url'=>'insertar-cliente'])!!}
                         <div class="row">
                             <div class="col-lg-8">
-                                {!!Form::open(['url'=>'insertar-cliente'])!!}
-
-                                    {!! Form::label('razonsocial', 'Razon Social:') !!}
-                                    {!! Form::text('razonSocial', null, ['class'=>'form-control']) !!}
-                                    
+                                {!! Form::label('razonsocial', 'Razón Social:') !!}
+                                {!! Form::text('razonSocial', null, ['class'=>'form-control']) !!}    
                             </div>
 
                             <div class="col-lg-4">
-
-                                    {!! Form::label('rfc', 'R.F.C:') !!}
-                                    {!! Form::text('rfc', null, ['class'=>'form-control']) !!}
-                                    
+                                {!! Form::label('rfc', 'R.F.C:') !!}
+                                {!! Form::text('rfc', null, ['class'=>'form-control']) !!}  
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-lg-12">
+                                {!! Form::label('direccionfiscal', 'Dirección Físcal:') !!}
+                                {!! Form::text('direccionFiscal', null, ['class'=>'form-control']) !!}    
                             </div>
                         </div>
                         <br />
@@ -37,6 +40,7 @@
                                 </p>
                             </div>
                         </div>
+                        {!!Form::close()!!}
                     </div>
                 </div>
             </div>
