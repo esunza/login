@@ -6,6 +6,16 @@
 	class Clientes extends Model{
 		protected $fillable=[
 			'razonSocial',
-			'rfc'
+			'rfc',
+			'direccionFiscal',
+			'nombres',
+			'apellidoPaterno',
+			'apellidoMaterno',
+			'email',
+			'telefono1',
+			'telefono2',
+			'usuario',
+			'contrasenia',
+			'confirmarContrasenia'
 		];
 	}
