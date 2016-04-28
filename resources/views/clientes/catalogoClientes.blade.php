@@ -7,7 +7,7 @@
         <div class="col-md-10">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 align="center">CATALOGO DE CLIENTES</h3>
+                    <h3 align="center">RELACION DE CLIENTES</h3>
                 </div>
                 <div class="panel-body">
                 

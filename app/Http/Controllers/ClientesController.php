@@ -50,4 +50,11 @@ class ClientesController extends Controller
 
     	return redirect('clientes');
     }
+
+    public function delete ($id)
+    {
+    	$cliente = Clientes::find($id);
+    	$cliente->delete();
+    	return redirect('clientes');
+    }
 }

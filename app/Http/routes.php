@@ -25,9 +25,10 @@ Route::get('/home', 'HomeController@index');
 //Route::get('/editar-cliente/{id}', 'ClientesController@edit');
 
 //Route::get('/actualizar-cliente/{id}', 'ClientesController@update');
+Route::resource('catalogo-clientes', 'ClientesController@index');
 
 Route::resource('clientes', 'ClientesController');
 
-Route::get('/clientes/{id}/eliminar', 'HomeController@eliminar');
+Route::get('/clientes/{id}/eliminar', 'ClientesController@delete');
 
 

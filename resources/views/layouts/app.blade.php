@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>EEE COMPYTEL</title>
+    <title>Sistema S.A.S.I.</title>
     
 
     <!-- Fonts -->
@@ -37,6 +37,23 @@
                 $('#example').DataTable();
             } );
         </script>
+        <script>
+            function validarFormulario()
+            {
+                var razonSocial = document.getElementById("razonSocial").value;
+                
+                if(razonSocial=="")
+                {
+                    alert("DEBE ESCRIBIR LA RAZON SOCIAL");
+                    document.agregarCliente.razonSocial.focus(); 
+                    return 0;
+                }
+                else
+                {
+                    document.getElementById("agregarCliente").submit();
+                }
+            }
+        </script>
         
 </head>
 <body id="app-layout">
@@ -53,7 +70,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/home') }}">
-                    EEE COMPYTEL | LA SOLUCION
+                   S.A.S.I.
                 </a>
             </div>
 

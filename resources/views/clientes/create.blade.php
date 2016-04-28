@@ -10,6 +10,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading"><h2 align="center">Agregar nuevo cliente</h2></div>
                 <div class="panel-body">
+
                     @if($errors->any())
                     <div class="alert alert-danger">
                         <ul class="alert alert-damage">
@@ -19,6 +20,7 @@
                         </ul>
                     </div>
                     @endif
+                    
                     <h3>Datos de la Empresa:</h3>
                     <hr />
                     <div class="form-group">
@@ -104,9 +106,11 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <p align="center">
-                                    {!! Form::submit('Agregar Cliente', ['class'=>'btn btn-info']) !!}
+                                    {!! Form::submit('Aceptar', ['class'=>'btn btn-info']) !!}
                                     &nbsp;&nbsp;&nbsp;
-                                    {!! Form::submit('Regresar al Catálogo', ['class'=>'btn btn-info']) !!}
+                                    <a href="javascript:window.history.back();" class="btn btn-info">&laquo; Cancelar</a>
+                                    &nbsp;&nbsp;&nbsp;
+                                    
                                 </p>
                             </div>
                         </div>

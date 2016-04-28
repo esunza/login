@@ -92,21 +92,21 @@
                                 {!! Form::text('usuario', null, ['class'=>'form-control']) !!}    
                             </div>
                             <div class="col-lg-4">
-                            <label>Contraseña</label>
-                                <input type="password" class="form-control" name="contrasenia">    
+                                {!! Form::label('contrasenia', 'Contraseña:') !!}
+                                {!! Form::password('password', null, ['class'=>'form-control']) !!}
                             </div>
                             <div class="col-lg-4">
-                            <label>Confirmar Contraseña</label>
-                                <input type="password" class="form-control" name="confirmarContrasenia">    
+                                {!! Form::label('confirmarContrasenia', 'Confirmar Contraseña:') !!}
+                                {!! Form::password('confirmarContrasenia', null, ['class'=>'form-control']) !!}
                             </div>
                         </div>
                         <br />
                         <div class="row">
                             <div class="col-lg-12">
                                 <p align="center">
-                                    {!! Form::submit('Guardar Cambios', ['class'=>'btn btn-info']) !!}
+                                    {!! Form::submit('Aceptar', ['class'=>'btn btn-info']) !!}
                                     &nbsp;&nbsp;&nbsp;
-                                    {!! Form::submit('Regresar al Catálogo', ['class'=>'btn btn-info']) !!}
+                                    <a href="javascript:window.history.back();" class="btn btn-info">&laquo; Cancelar</a>
                                 </p>
                             </div>
                         </div>

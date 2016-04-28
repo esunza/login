@@ -30,8 +30,8 @@ class CreateClienteRequest extends Request
             'email' =>'required|email',
             'telefono1' =>'required',
             'usuario' =>'required',
-            'contrasenia' =>'required',
-            'confirmarContrasenia' =>'required',
+            'contrasenia' =>'required|min:8',
+            'confirmarContrasenia' =>'required|min:8'
         ];
     }
 }

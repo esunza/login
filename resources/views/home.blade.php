@@ -6,7 +6,7 @@
         </div>
         <div class="col-md-10">
             <div class="panel panel-default">
-                <div class="panel-heading">Bienvenido a la página principal</div>
+                <div class="panel-heading"><h3 align="center">SISTEMA ADMINISTRATIVO DE SERVICIOS E INSTALACIONES</h3></div>
                 <div class="panel-body">
                     <div id="page-inner">         
                         <hr />
